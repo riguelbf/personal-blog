@@ -27,8 +27,30 @@ export default function Home({ posts, locale, availableLocales }) {
         description={siteMetadata.description[locale]}
         availableLocales={availableLocales}
       />
+      <div className="space-y-2 pb-8 pt-6 md:space-y-5">
+        <h1 className="text-4xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:leading-10 md:leading-14">
+          Hey, I'm Riguel Figueiro 👋🏾
+          <span className="wave" role="img" aria-label="Hello">
+          </span>
+        </h1>
+        <p className="font-mono text-lg tracking-tighter text-gray-600 dark:text-gray-400">
+          I write code. <br /> in backend and frontend.. <br />
+          Really like any challanges
+        </p>
+        {/* <p className="text-lg font-light tracking-tighter text-gray-600 dark:text-gray-400">
+          I'm also on
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://twitter.com/PsyGik"
+            className="icon-link hover-underline-animation inline-flex flex-row items-center gap-2 font-bold"
+          >
+            that bird app.
+          </a>
+        </p> */}
+      </div>
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
-        <div className="space-y-2 pt-6 pb-8 md:space-y-5">
+        <div className="space-y-2 pb-8 pt-6 md:space-y-5">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             {t('common:greeting')}
           </h1>

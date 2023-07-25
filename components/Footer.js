@@ -23,10 +23,11 @@ export default function Footer() {
           <div>{` • `}</div>
           <Link href="/">{siteMetadata.title[locale]}</Link>
         </div>
-        <div className="mb-8 text-sm text-gray-500 dark:text-gray-400">
+        <div className="mb-8 flex flex-col items-center text-sm text-gray-500 dark:text-gray-400">
           <Link href="https://github.com/timlrx/tailwind-nextjs-starter-blog">
             Tailwind Nextjs Theme
           </Link>
+          <Link href="https://pt.pikbest.com">Livre  fundos de pt.pikbest.com</Link>
         </div>
       </div>
     </footer>

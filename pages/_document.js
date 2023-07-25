@@ -33,7 +33,12 @@ class MyDocument extends Document {
             crossOrigin="anonymous"
           />
         </Head>
-        <body className="bg-white text-black antialiased dark:bg-gray-900 dark:text-white">
+        <body className="bg-white text-black antialiased dark:bg-gray-900 dark:text-white" style={{
+            backgroundImage: "url('https://img.pikbest.com/backgrounds/20200512/abstract-black-background-with-square-purple-and-blue-frame-luxury-futuristic-technology-v_1761876jpg!sw800')",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          backgroundAttachment: "fixed"
+        }}>
           <Main />
           <NextScript />
         </body>

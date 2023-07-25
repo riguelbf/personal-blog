@@ -1,6 +1,34 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 const colors = require('tailwindcss/colors')
 
+const ebony = {
+  50: '#eef5ff',
+  100: '#dfedff',
+  200: '#c6dbff',
+  300: '#a3c4fe',
+  400: '#7fa0fa',
+  500: '#607ef4',
+  600: '#4358e8',
+  700: '#3546cd',
+  800: '#2e3da5',
+  900: '#2c3983',
+  950: '#0d1026',
+}
+
+const electricViolet = {
+  50: '#f5f1ff',
+  100: '#ede6ff',
+  200: '#dcd0ff',
+  300: '#c3aaff',
+  400: '#a77aff',
+  500: '#8e45ff',
+  600: '#831fff',
+  700: '#750ef3',
+  800: '#620bcc',
+  900: '#520ba7',
+  950: '#2d0368',
+}
+
 module.exports = {
   experimental: {
     optimizeUniversalDefaults: true,
@@ -28,7 +56,7 @@ module.exports = {
         sans: ['InterVariable', ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        primary: colors.teal,
+        primary: electricViolet,
         gray: colors.neutral,
       },
       typography: (theme) => ({

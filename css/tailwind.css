@@ -23,3 +23,10 @@ input:-webkit-autofill,
 input:-webkit-autofill:focus {
   transition: background-color 600000s 0s, color 600000s 0s;
 }
+
+/* body {
+  background-image: url(https://img.pikbest.com/backgrounds/20200512/abstract-black-background-with-square-purple-and-blue-frame-luxury-futuristic-technology-v_1761876jpg!sw800);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+} */

@@ -4,6 +4,7 @@ import headerNavLinks from '@/data/headerNavLinks'
 import Logo from '@/data/logo.svg'
 import Link from './Link'
 import SectionContainer from './SectionContainer'
+import Image from './Image'
 import Footer from './Footer'
 import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
@@ -23,13 +24,22 @@ const LayoutWrapper = ({ children }) => {
 
   return (
     <SectionContainer>
-      <div className="flex h-screen flex-col justify-between">
+      <div className="flex h-screen flex-col justify-between" >
         <header className="flex items-center justify-between py-10">
           <div>
             <Link href="/" aria-label={siteMetadata.headerTitle}>
               <div className="flex items-center justify-between">
                 <div className="mr-3">
-                  <Logo />
+                  <Image
+                    src="/static/images/github_avatar.png"
+                    alt="avatar"
+                    width="100x"
+                    height="100px"
+                    className="h-48 w-48 rounded-full"
+                  />
+                </div>
+                <div class="hover-underline-animation text-2smx  text-primary-500 font-semibold">
+                  Just a full stack developer
                 </div>
                 {typeof siteMetadata.headerTitle[locale] === 'string' ? (
                   <div className="hidden h-6 text-2xl font-semibold sm:block">
