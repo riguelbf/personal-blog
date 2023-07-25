@@ -30,8 +30,7 @@ export default function Home({ posts, locale, availableLocales }) {
       <div className="space-y-2 pb-8 pt-6 md:space-y-5">
         <h1 className="text-4xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:leading-10 md:leading-14">
           Hey, I'm Riguel Figueiro 👋🏾
-          <span className="wave" role="img" aria-label="Hello">
-          </span>
+          <span className="wave" role="img" aria-label="Hello"></span>
         </h1>
         <p className="font-mono text-lg tracking-tighter text-gray-600 dark:text-gray-400">
           I write code. <br /> in backend and frontend.. <br />
