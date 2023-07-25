@@ -2,6 +2,9 @@
 import siteMetadata from '@/data/siteMetadata'
 import headerNavLinks from '@/data/headerNavLinks'
 import Logo from '@/data/logo.svg'
+import BlogIcon from '@/data/blog_icon.svg'
+import ProjectsIcon from '@/data/projects_icon.svg'
+import TagsIcon from '@/data/tags_icon.svg'
 import Link from './Link'
 import SectionContainer from './SectionContainer'
 import Image from './Image'
@@ -22,9 +25,16 @@ const LayoutWrapper = ({ children }) => {
     router.push(router.asPath, router.asPath, { locale })
   }
 
+  const navBarIconComponent = {
+    Blog: BlogIcon,
+    Projects: ProjectsIcon,
+    Tags: TagsIcon,
+    About: () => <div />,
+  }
+
   return (
     <SectionContainer>
-      <div className="flex h-screen flex-col justify-between" >
+      <div className="flex h-screen flex-col justify-between">
         <header className="flex items-center justify-between py-10">
           <div>
             <Link href="/" aria-label={siteMetadata.headerTitle}>
@@ -33,12 +43,12 @@ const LayoutWrapper = ({ children }) => {
                   <Image
                     src="/static/images/github_avatar.png"
                     alt="avatar"
-                    width="100x"
-                    height="100px"
-                    className="h-48 w-48 rounded-full"
+                    width="80%"
+                    height="80%"
+                    className="rounded-full sm:h-8 sm:w-8"
                   />
                 </div>
-                <div class="hover-underline-animation text-2smx  text-primary-500 font-semibold">
+                <div className="text-1xs hidden font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:block sm:text-2xl sm:leading-10 md:text-2xl md:leading-14">
                   Just a full stack developer
                 </div>
                 {typeof siteMetadata.headerTitle[locale] === 'string' ? (
@@ -54,16 +64,20 @@ const LayoutWrapper = ({ children }) => {
           <div className="flex items-center text-base leading-5">
             <div className="hidden sm:block">
               {headerNavLinks.map((link) => (
-                <Link
-                  key={link.title}
-                  href={link.href}
-                  className="p-1 font-medium text-gray-900 dark:text-gray-100 sm:p-4"
-                >
-                  {t(`headerNavLinks:${link.title.toLowerCase()}`)}
-                </Link>
+                <>
+                  {/* {navBarIconComponent[link.title]()} */}
+                  {/* {1} */}
+                  <Link
+                    key={link.title}
+                    href={link.href}
+                    className="p-1 font-medium text-gray-900 dark:text-gray-100 sm:p-4"
+                  >
+                    {t(`headerNavLinks:${link.title.toLowerCase()}`)}
+                  </Link>
+                </>
               ))}
             </div>
-            <select
+            {/* <select
               onChange={changeLanguage}
               defaultValue={locale}
               style={{ textAlignLast: 'center' }}
@@ -74,8 +88,8 @@ const LayoutWrapper = ({ children }) => {
                   {e}
                 </option>
               ))}
-            </select>
-            <ThemeSwitch />
+            </select> */}
+            {/* <ThemeSwitch /> */}
             <MobileNav />
           </div>
         </header>
